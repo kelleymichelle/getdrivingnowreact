@@ -1,12 +1,21 @@
 import React from 'react';
-import './App.css';
+import Form from './components/Form'
+import Form2 from './components/Form2'
+import Form3 from './components/Form3'
+import Form4 from './components/Form4'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="App">
+        <Form />
+        <Form2 />
+        <Form3 />
+        <Form4 />
+      </div>
+    );
+  }
 }
 
 export default App;
