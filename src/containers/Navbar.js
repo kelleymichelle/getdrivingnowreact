@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AboutUs from '../components/AboutUs'
 import FinancingFAQ from '../components/FinancingFAQ'
-import Login from '../components/Login'
+import Login from '../components/LoginSignup'
 import { NavLink } from 'react-router-dom'
 
 const link ={
