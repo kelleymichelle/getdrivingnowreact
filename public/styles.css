@@ -1,0 +1,16 @@
+body {
+    background-image: url('./images/GetDrivingNow8.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 100vh; */
+    /* background-color: bisque; */
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        /* background-color: olive; */
+        background-image: url("./images/GDNhomemobilebackground.png");
+    }
+}
