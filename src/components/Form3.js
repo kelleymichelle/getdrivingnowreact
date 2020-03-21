@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Link, Redirect } from "react-router-dom";
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
@@ -9,7 +10,8 @@ class Form3 extends React.Component {
         phone: "",
         dob: "",
         ssn: "",
-        bankruptcy: ""
+        bankruptcy: "",
+        redirect: null
     }
 
     handleChange = (event) => {      
@@ -19,7 +21,21 @@ class Form3 extends React.Component {
         console.log(event.target.value)
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        // after submit, redirects to flight page
+        this.setState({
+            redirect: "/form4",
+        })  
+    }
+
     render() {
+        if(this.state.redirect) {
+            return <Redirect to={{
+                pathname: this.state.redirect,                
+            }}/>
+        }
         return (
             <div>
                 <Col>
@@ -38,9 +54,14 @@ class Form3 extends React.Component {
                         </Col>
                     </Form.Group>
                     </Form.Row>
+                    <Link className="nav-link" 
+                        to='/form4'
+                        exact="true"
+                    >
                     <Button className="d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "#212747"}} size="lg" type="submit">
                         Continue
                     </Button>
+                    </Link>
                 </Form>
                 </Col>
             </div>

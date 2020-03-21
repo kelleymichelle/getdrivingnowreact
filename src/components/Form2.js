@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Link, Redirect } from "react-router-dom";
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
@@ -13,7 +14,8 @@ class Form2 extends React.Component {
         residence_type: "",
         monthly_housing_cost: "",
         address_duration_years: "",
-        address_duration_months: ""
+        address_duration_months: "",
+        redirect: null
     }
 
     handleChange = (event) => {      
@@ -22,8 +24,22 @@ class Form2 extends React.Component {
         })
         console.log(event.target.value)
     }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        // after submit, redirects to flight page
+        this.setState({
+            redirect: "/form3",
+        })  
+    }
     
     render() {
+        if(this.state.redirect) {
+            return <Redirect to={{
+                pathname: this.state.redirect,                
+            }}/>
+        }
         return (
             <div>
                 <Col>
@@ -50,9 +66,14 @@ class Form2 extends React.Component {
                         </Col>
                     </Form.Group>
                     </Form.Row>
+                    <Link className="nav-link" 
+                        to='/form3'
+                        exact="true"
+                    >
                     <Button className="d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "#212747"}} size="lg" type="submit">
                         Continue
                     </Button>
+                    </Link>
                 </Form>
                 </Col>
             </div>

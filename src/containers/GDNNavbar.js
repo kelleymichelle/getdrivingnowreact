@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import { NavLink } from 'react-router-dom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,82 +19,82 @@ import AboutUs from '../components/AboutUs';
 import FinancingFAQ from '../components/FinancingFAQ';
 import axios from 'axios'
 
-class GDNNavbar extends Component {
+class GDNNavbar extends React.Component {
     constructor(props) {
         super(props)
-  
+
         this.state = {
-           isLoggedIn: false,
-           user: {}
+            isLoggedIn: false,
+            user: {}
         }
-     } 
+    } 
         //keep track of logged in status and request this information every time it’s mounted
-     componentDidMount() {
+    componentDidMount() {
         this.loginStatus()
-     }
-  
+    }
+
       //taking in login data recieved from server and setting state
-     handleLogin = (data) => {
+    handleLogin = (data) => {
      // debugger
         console.log(data)
         if (data.user) {
-           const user = data.user
-           this.dataOrigin(user)
-        } else if (data.data.user) {
-           const user = data.data.user
-           this.dataOrigin(user)
+            const user = data.user
+            this.dataOrigin(user)
+            } else if (data.data.user) {
+            const user = data.data.user
+            this.dataOrigin(user)
         }
         // this.props.dispatch({ type: 'LOGIN_USER', payload: data.user })
         // this.setState({
         //    isLoggedIn: true,
         //    user: this.props.user
         // })
-     }
-  
+    }
+
      //helper function to overcome not setting state 2x in same function and to
      //also pass into conditional to check if the origin of the data is from the 
      //server(to check for login from session) or from user input.
-     
-     dataOrigin = (user) => {
+
+    dataOrigin = (user) => {
         this.props.dispatch({ type: 'LOGIN_USER', payload: user})
         this.setState({
-           isLoggedIn: true,
-           user: this.props.user
+            isLoggedIn: true,
+            user: this.props.user
         })
-     }
-  
+    }
+
       //on logout clears user state obj and toggles isLoggedIn obj to false
-     handleLogout = () => {
+    handleLogout = () => {
         this.props.dispatch({ type: 'LOGOUT_USER', payload: ''})
-        this.setState({
-        isLoggedIn: false,
-        user: {}
+            this.setState({
+            isLoggedIn: false,
+            user: {}
         })
-     }
-  
-     loginStatus = () => {
+    }
+
+    loginStatus = () => {
         //ajax call to sessions custom route
         axios.get('http://localhost:3001/logged_in',
         // This allows our Rails server to set and read the cookie on the front-end’s browser.
         {withCredentials: true})
         .then(response => {
-           if (response.data.logged_in) {
-              this.handleLogin(response)
-           } else {
-              this.handleLogout()
-           }
+            if (response.data.logged_in) {
+                this.handleLogin(response)
+            } else {
+                this.handleLogout()
+            }
         })
         .catch(error => console.log('api errors:', error))
         }
-     
-     handleLogoutClick = () => {
+
+    handleLogoutClick = () => {
         axios.delete('http://localhost:3001/logout', {withCredentials: true})
         .then(response => {
-           this.handleLogout()
-           this.props.history.push('/')
+            this.handleLogout()
+            this.props.history.push('/')
         })
         .catch(error => console.log(error))
-     }
+    }
 
 
     render() {
@@ -106,6 +106,8 @@ class GDNNavbar extends Component {
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                             <Navbar.Collapse id="navbar-toggle">
                                 <Nav className="ml-auto">
+                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/form1'>Apply Now</Link>
+                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/financingFAQ'>FinancingFAQ</Link>
                                     <NavDropdown className="account" style={{margin: 'inherit'}} title={
                                         <span className="mr-auto" style={{color: "white"}}>Account</span>
                                             } id="basic-dropdown">

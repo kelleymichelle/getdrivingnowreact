@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Link, Redirect } from "react-router-dom";
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
@@ -8,7 +9,8 @@ class Form1 extends React.Component {
         firstName: "",
         lastName: "",
         email: "",
-        zip: ""
+        zip: "",
+        redirect: null
     }
 
     handleChange = (event) => {      
@@ -18,7 +20,20 @@ class Form1 extends React.Component {
         console.log(event.target.value)
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        this.setState({
+            redirect: "/form2",
+        })  
+    }
+
     render() {
+        if(this.state.redirect) {
+            return <Redirect to={{
+                pathname: this.state.redirect,                
+            }}/>
+        }
         return (
             <div>
                 {/* {this.errorMessages()} */}
@@ -38,10 +53,14 @@ class Form1 extends React.Component {
                         </Col>
                     </Form.Group>
                     </Form.Row>
+                    <Link className="nav-link" 
+                        to='/form2'
+                        exact="true">
                     <Button className="d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "#212747"}} size="lg" type="submit">
                         Continue
                     </Button>
-            </Form>
+                    </Link>
+                </Form>
             </Col>
             </div>
         )
