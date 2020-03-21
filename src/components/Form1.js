@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
-export class Form1 extends Component {
+class Form1 extends React.Component {
     state = {
         firstName: "",
         lastName: "",

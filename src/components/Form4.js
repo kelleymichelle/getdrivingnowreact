@@ -1,6 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
-export class Form4 extends Component {
+class Form4 extends React.Component {
 
     state = {
         employment_type: "",
@@ -12,25 +15,43 @@ export class Form4 extends Component {
         monthly_income: ""
     }
 
+    handleChange = (event) => {      
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+        console.log(event.target.value)
+    }
+
     render() {
         return (
             <div>
-                <form>
-                    <label>Employment Type:</label>
-                    <input type="text" name="employment_type" value={this.state.employment_type} />
-                    <label>Employer Name:</label>
-                    <input type="text" name="employer_name" value={this.state.employer_name} />
-                    <label>Employer phone number:</label>
-                    <input type="text" name="employer_phone_number" value={this.state.employer_phone_number} />
-                    <label>Job Title:</label>
-                    <input type="text" name="job_title" value={this.state.job_title} />
-                    <label>Job Duration Years:</label>
-                    <input type="text" name="job_duration_years" value={this.state.job_duration_years} />
-                    <label>Job Duration Months:</label>
-                    <input type="text" name="job_duration_months" value={this.state.job_duration_months} />
-                    <label>Monthly Income:</label>
-                    <input type="text" name="monthly_income" value={this.state.monthly_income} />
-                </form>
+                <Col>
+                <Form onSubmit={this.handleSubmit} className="justify-content-md-center">
+                    <Form.Row>
+                        <Form.Group>
+                            <Col>
+                                <Form.Label style={{color: "#364182"}}>Employment Type:</Form.Label>
+                                <Form.Control id="employment_type" type="text" name="employment_type" placeholder="Employment Type" value={this.state.employment_type} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Employer Name:</Form.Label>
+                                <Form.Control id="employer_name" type="text" name="employer_name" placeholder="Employer Name" value={this.state.employer_name} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Employer Phone Number:</Form.Label>
+                                <Form.Control id="employer_phone_number" type="text" name="employer_phone_number" placeholder="Employer Phone Number" value={this.state.employer_phone_number} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Job Title:</Form.Label>
+                                <Form.Control id="job_title" type="text" name="job_title" placeholder="Job Title" value={this.state.job_title} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Job Duration Years:</Form.Label>
+                                <Form.Control id="job_duration_years" type="text" name="job_duration_years" placeholder="Job Duration Years" value={this.state.job_duration_years} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Job Duration Months:</Form.Label>
+                                <Form.Control id="job_duration_months" type="text" name="job_duration_months" placeholder="Job Duration Years" value={this.state.job_duration_months} onChange={this.handleChange} />
+                                <Form.Label style={{color: "#364182"}}>Monthly Income:</Form.Label>
+                                <Form.Control id="monthly_income" type="text" name="monthly_income" placeholder="Monthly Income" value={this.state.monthly_income} onChange={this.handleChange} />
+                            </Col>
+                        </Form.Group>
+                    </Form.Row>
+                    <Button className="d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "#212747"}} size="lg" type="submit">
+                        Continue
+                    </Button>
+                </Form>
+                </Col>
             </div>
         )
     }

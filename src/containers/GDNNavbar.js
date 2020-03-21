@@ -15,7 +15,7 @@ import Nav from 'react-bootstrap/Nav'
 // import Form3 from '../components/Form3';
 // import Form4 from '../components/Form4';
 
-export class GDNNavbar extends Component {
+class GDNNavbar extends Component {
     render() {
         return (
             <div>
@@ -52,4 +52,4 @@ export class GDNNavbar extends Component {
     }
 }
 
-export default Navbar
+export default GDNNavbar;
