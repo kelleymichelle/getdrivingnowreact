@@ -1,23 +1,27 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+// import { NavDropdown } from 'react-bootstrap';
+// import Footer from '../components/Footer';
+// import HomePage from '../pages/HomePage';
+// import Login from '../pages/Login'
+// import CreateAccount from '../pages/CreateAccount'
+// import Form from '../components/Form';
+// import Form2 from '../components/Form2';
+// import Form3 from '../components/Form3';
+// import Form4 from '../components/Form4';
 
-const link ={
-    width: "100px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "blue",
-    textDecoration: "none",
-    color: "white",
-}
-
-export class Navbar extends Component {
+export class GDNNavbar extends Component {
     render() {
         return (
             <div>
                 <NavLink 
                     to="/" 
                     exact
-                    style={link}
                     activeStyle={{
                         background: 'darkblue'
                     }}
@@ -25,7 +29,6 @@ export class Navbar extends Component {
                 <NavLink 
                     to="/about" 
                     exact
-                    style={link}
                     activeStyle={{
                         background: 'darkblue'
                     }}
@@ -33,7 +36,6 @@ export class Navbar extends Component {
                 <NavLink
                     to="/financing"
                     exact
-                    style={link}
                     activeStyle={{
                         background: "darkblue"
                     }}
@@ -41,7 +43,6 @@ export class Navbar extends Component {
                 <NavLink
                     to="/login"
                     exact
-                    style={link}
                     activeStyle={{
                         background: "darkblue"
                     }}
