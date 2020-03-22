@@ -106,11 +106,11 @@ class GDNNavbar extends React.Component {
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                             <Navbar.Collapse id="navbar-toggle">
                                 <Nav className="ml-auto">
-                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/aboutUs'>About Us</Link>
-                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/form1'>Apply Now</Link>
-                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/financingFAQ'>FinancingFAQ</Link>
+                                <Link className="nav-link" style={{color: "black", margin: 'inherit'}} to='/aboutUs'>About Us</Link>
+                                <Link className="nav-link" style={{color: "black", margin: 'inherit'}} to='/form1'>Apply Now</Link>
+                                <Link className="nav-link" style={{color: "black", margin: 'inherit'}} to='/financingFAQ'>FinancingFAQ</Link>
                                     <NavDropdown className="account" style={{margin: 'inherit'}} title={
-                                        <span className="mr-auto" style={{color: "white"}}>Account</span>
+                                        <span className="mr-auto" style={{color: "black"}}>Account</span>
                                             } id="basic-dropdown">
                                         { 
                                         this.state.isLoggedIn ? 
@@ -127,7 +127,7 @@ class GDNNavbar extends React.Component {
                                         </>
                                         }
                                     </NavDropdown>
-                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/'>Home</Link>
+                                <Link className="nav-link" style={{color: "black", margin: 'inherit'}} to='/'>Home</Link>
 
                                 </Nav>
                             </Navbar.Collapse>
