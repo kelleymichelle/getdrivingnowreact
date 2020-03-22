@@ -40,26 +40,26 @@ class Form4 extends React.Component {
             }}/>
         }
         return (
-            <div>
+            <div className='fb4'>
                 <Col>
                 <Form onSubmit={this.handleSubmit} className="justify-content-md-center">
                     <Form.Row>
                         <Form.Group>
                             <Col>
                                 <Form.Label style={{color: "#364182"}}>Employment Type:</Form.Label>
-                                <Form.Control id="employment_type" type="text" name="employment_type" placeholder="Employment Type" value={this.state.employment_type} onChange={this.handleChange} />
+                                    <Form.Control id="employment_type" type="text" name="employment_type" placeholder="Employment Type" value={this.state.employment_type} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Employer Name:</Form.Label>
-                                <Form.Control id="employer_name" type="text" name="employer_name" placeholder="Employer Name" value={this.state.employer_name} onChange={this.handleChange} />
+                                    <Form.Control id="employer_name" type="text" name="employer_name" placeholder="Employer Name" value={this.state.employer_name} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Employer Phone Number:</Form.Label>
-                                <Form.Control id="employer_phone_number" type="text" name="employer_phone_number" placeholder="Employer Phone Number" value={this.state.employer_phone_number} onChange={this.handleChange} />
+                                    <Form.Control id="employer_phone_number" type="text" name="employer_phone_number" placeholder="Employer Phone Number" value={this.state.employer_phone_number} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Job Title:</Form.Label>
-                                <Form.Control id="job_title" type="text" name="job_title" placeholder="Job Title" value={this.state.job_title} onChange={this.handleChange} />
+                                    <Form.Control id="job_title" type="text" name="job_title" placeholder="Job Title" value={this.state.job_title} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Job Duration Years:</Form.Label>
-                                <Form.Control id="job_duration_years" type="text" name="job_duration_years" placeholder="Job Duration Years" value={this.state.job_duration_years} onChange={this.handleChange} />
+                                    <Form.Control id="job_duration_years" type="text" name="job_duration_years" placeholder="Job Duration Years" value={this.state.job_duration_years} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Job Duration Months:</Form.Label>
-                                <Form.Control id="job_duration_months" type="text" name="job_duration_months" placeholder="Job Duration Years" value={this.state.job_duration_months} onChange={this.handleChange} />
+                                    <Form.Control id="job_duration_months" type="text" name="job_duration_months" placeholder="Job Duration Years" value={this.state.job_duration_months} onChange={this.handleChange} />
                                 <Form.Label style={{color: "#364182"}}>Monthly Income:</Form.Label>
-                                <Form.Control id="monthly_income" type="text" name="monthly_income" placeholder="Monthly Income" value={this.state.monthly_income} onChange={this.handleChange} />
+                                    <Form.Control id="monthly_income" type="text" name="monthly_income" placeholder="Monthly Income" value={this.state.monthly_income} onChange={this.handleChange} />
                             </Col>
                         </Form.Group>
                     </Form.Row>
@@ -73,6 +73,7 @@ class Form4 extends React.Component {
                     </Link>
                 </Form>
                 </Col>
+                <div style={{height: "140px"}}></div>
             </div>
         )
     }

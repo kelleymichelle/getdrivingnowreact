@@ -35,7 +35,7 @@ class Form1 extends React.Component {
             }}/>
         }
         return (
-            <div>
+            <div className='fb1'>
                 {/* {this.errorMessages()} */}
             <Col>
                 <Form onSubmit={this.handleSubmit} className="justify-content-md-center">
@@ -62,6 +62,7 @@ class Form1 extends React.Component {
                     </Link>
                 </Form>
             </Col>
+            <div style={{height: "350px"}}></div>
             </div>
         )
     }

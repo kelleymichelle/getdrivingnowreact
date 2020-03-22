@@ -1,0 +1,55 @@
+/* .fb1 {
+    height: 100%;
+} */
+
+.fb1 {
+    background: url('./assets/formbackground-1.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.fb2 {
+    background: url('./assets/formbackground-2.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.fb3 {
+    background: url('./assets/formbackground-3.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.fb4 {
+    background: url('./assets/formbackground-4.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.congratulations {
+    background: url('./assets/formbackground-5.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #ffc600;
+}
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffc600;
+    /* color: white; */
+}
