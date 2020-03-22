@@ -106,6 +106,7 @@ class GDNNavbar extends React.Component {
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                             <Navbar.Collapse id="navbar-toggle">
                                 <Nav className="ml-auto">
+                                <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/aboutUs'>About Us</Link>
                                 <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/form1'>Apply Now</Link>
                                 <Link className="nav-link" style={{color: "white", margin: 'inherit'}} to='/financingFAQ'>FinancingFAQ</Link>
                                     <NavDropdown className="account" style={{margin: 'inherit'}} title={
