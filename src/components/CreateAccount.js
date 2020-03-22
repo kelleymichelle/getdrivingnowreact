@@ -67,7 +67,7 @@ class CreateAccount extends React.Component {
             }}/>
         }
         return (
-            <div>
+            <div className='signup'>
                 <Col>
                     <Form onSubmit={this.handleSubmit} className="justify-content-md-center">
                         <Form.Row>
@@ -99,7 +99,8 @@ class CreateAccount extends React.Component {
                             </Button>
                         </Link>                  
                     </Form>
-                </Col>            
+                </Col>  
+                <div style={{height: "550px"}}></div>          
             </div>
         )
     }

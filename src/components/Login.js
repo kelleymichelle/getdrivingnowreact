@@ -24,7 +24,7 @@ export class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='login'>
                 {/* {this.errorMessages()} */}
                 <Col>
                     <Form onSubmit={this.handleSubmit} className="justify-content-md-center">
@@ -43,6 +43,7 @@ export class Login extends React.Component {
                             </Button>
                     </Form>
                 </Col> 
+                <div style={{height: "550px"}}></div>
             </div>
         )
     }

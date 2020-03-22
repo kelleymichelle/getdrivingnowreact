@@ -58,3 +58,19 @@
 .button {
     margin-top: 1em;
 }
+
+.login {
+    background: url('./assets/GDNLoginSignupbackground.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.signup {
+    background: url('./assets/GDNLoginSignupbackground.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
