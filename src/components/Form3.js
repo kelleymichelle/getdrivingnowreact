@@ -11,7 +11,7 @@ class Form3 extends React.Component {
         phone: "",
         dob: "",
         ssn: "",
-        bankruptcy: "",
+        bankruptcy: false,
         redirect: null
     }
 
