@@ -1,6 +1,20 @@
 /* .fb1 {
     height: 100%;
 } */
+body {
+    background-image: url('../src/assets/GetDrivingNowBackground.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        /* background-color: olive; */
+        background-image: url("../src/assets/GDNhomemobilebackground.png");
+    }
+}
 
 .fb1 {
     background: url('./assets/formbackground-1.png');
@@ -42,8 +56,16 @@
     height: 100%;
 }
 
+.aboutUs {
+    background: url('./assets/GDNplainbackground.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 .navbar {
-    background-color: #ffc800;
+    background-color: #ffc600;
 }
 
 #footer {
@@ -78,4 +100,4 @@
 .applyNowBtn {
     text-align: center;
     margin-top: 20%;    
-}
+

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Redirect } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
+
 class Home extends React.Component {
     state = {
         redirect: null
@@ -19,11 +20,12 @@ class Home extends React.Component {
         }
         return (
             <div className='applyNowBtn'>                
-                <Button className="button d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "#212747"}} size="lg" type="submit" onClick={this.handleClick}>
+                <Button className="button d-inline-block" variant="primary" style={{margingTop: "2em", backgroundColor: "black"}} size="lg" type="submit" onClick={this.handleClick}>
                     Apply Now
                 </Button>
             </div>
         )
     }
 }
+
 export default Home;
