@@ -74,3 +74,8 @@
     background-size: cover;
     height: 100%;
 }
+
+.applyNowBtn {
+    text-align: center;
+    margin-top: 20%;    
+}
