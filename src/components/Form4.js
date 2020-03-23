@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 class Form4 extends React.Component {
 
     state = {
-        employment_type: "",
+        employment_type: "Full-Time",
         employer_name: "",
         employer_phone_number: "",
         job_title: "",
@@ -58,8 +58,8 @@ class Form4 extends React.Component {
                                             </Form.Control>
                                         <Form.Label style={{color: "white"}}>Employer Name:</Form.Label>
                                             <Form.Control id="employer_name" type="text" name="employer_name" placeholder="Employer Name" value={this.state.employer_name} onChange={this.handleChange} />
-                                        <Form.Label style={{color: "white"}}>Employer Phone Number:</Form.Label>
-                                            <Form.Control id="employer_phone_number" type="text" name="employer_phone_number" placeholder="Employer Phone Number" value={this.state.employer_phone_number} onChange={this.handleChange} />
+                                        <Form.Label style={{color: "white"}}>Employer Phone:</Form.Label>
+                                            <Form.Control id="employer_phone_number" type="text" name="employer_phone_number" placeholder="xxx-xxx-xxxx" value={this.state.employer_phone_number} onChange={this.handleChange} />
                                         <Form.Label style={{color: "white"}}>Job Title:</Form.Label>
                                             <Form.Control id="job_title" type="text" name="job_title" placeholder="Job Title" value={this.state.job_title} onChange={this.handleChange} />
                                         <Form.Label style={{color: "white"}}>Job Duration Years:</Form.Label>
