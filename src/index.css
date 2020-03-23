@@ -56,6 +56,14 @@ body {
     height: 100%;
 }
 
+.aboutUs {
+    background: url('./assets/GDNplainbackground.png');
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 .navbar {
     background-color: #ffc600;
 }
@@ -92,4 +100,8 @@ body {
 .applyNowBtn {
     text-align: center;
     margin-top: 20%;    
+}
+
+.applyNowBtn2 {
+    text-align: center;
 }
