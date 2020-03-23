@@ -18,6 +18,7 @@ import Congratulations from '../components/Congratulations';
 import AboutUs from '../components/AboutUs';
 import FinancingFAQ from '../components/FinancingFAQ';
 import axios from 'axios'
+import brand from '../assets/Getdrivingnowcombrand.png'
 
 class GDNNavbar extends React.Component {
     constructor(props) {
@@ -102,7 +103,10 @@ class GDNNavbar extends React.Component {
             <div>
             <Router>
                 <Container className="p-0" fluid={true} >
-                    <Navbar className="navbar" expand="md">
+                    <Navbar className="navbar" expand="lg">
+                        <Navbar.Brand>
+                            <img src={brand} style={{height: "50px", width: "340px"}} alt=""/>
+                        </Navbar.Brand>
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                             <Navbar.Collapse id="navbar-toggle">
                                 <Nav className="ml-auto">
