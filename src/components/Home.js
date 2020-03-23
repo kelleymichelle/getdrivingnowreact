@@ -9,13 +9,13 @@ class Home extends React.Component {
     handleClick = (event) => {
         event.preventDefault()
         this.setState({
-            redirect: '/form1'
+            redirect: '/signup'
         })  
     }
     render() {
         if(this.state.redirect) {
             return <Redirect to={{
-                pathname: '/form1'
+                pathname: '/signup'
             }}/>
         }
         return (
