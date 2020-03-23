@@ -11,7 +11,7 @@ class Form3 extends React.Component {
         phone: "",
         dob: "",
         ssn: "",
-        bankruptcy: false,
+        bankruptcy: "false",
         redirect: null
     }
 
@@ -45,14 +45,15 @@ class Form3 extends React.Component {
                             <Form.Row className="justify-content-md-center">
                             <Form.Group>
                                 <Col>
-                                    <Form.Label style={{color: "#364182"}}>Phone:</Form.Label>
+                                    <Form.Label style={{color: "white"}}>Phone:</Form.Label>
                                     <Form.Control id="phone" type="text" name="phone" placeholder="xxx-xxx-xxxx" value={this.state.phone} onChange={this.handleChange} />
-                                    <Form.Label style={{color: "#364182"}}>Date of Birth:</Form.Label>
+                                    <Form.Label style={{color: "white"}}>Date of Birth:</Form.Label>
                                     <Form.Control id="dob" type="text" name="dob" placeholder="dd-mm-yyyy" value={this.state.dob} onChange={this.handleChange} />
-                                    <Form.Label style={{color: "#364182"}}>Social Security Number:</Form.Label>
+                                    <Form.Label style={{color: "white"}}>Social Security Number:</Form.Label>
                                     <Form.Control id="ssn" type="text" name="ssn" placeholder="xxx-xx-xxxx" value={this.state.ssn} onChange={this.handleChange} />
-                                    <Form.Label style={{color: "#364182"}}>Bankruptcy:</Form.Label>
-                                    <Form.Control id="bankruptcy" type="text" name="bankruptcy" placeholder="Bankruptcy true/false" value={this.state.bankruptcy} onChange={this.handleChange} />
+                                    <Form.Label style={{color: "white"}}>Bankruptcy:</Form.Label>
+                                    <Form.Check label='True' id="bankruptcy" type="radio" name="bankruptcy" style={{color: "white"}} value='true' onChange={this.handleChange} />                                        
+                                    <Form.Check label='False' id="bankruptcy" type="radio" name="bankruptcy" style={{color: "white"}} value='false' onChange={this.handleChange} />
                                 </Col>
                                     <Link className="nav-link" 
                                         to='/form4'
