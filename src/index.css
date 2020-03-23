@@ -43,7 +43,7 @@
 }
 
 .navbar {
-    background-color: #ffc800;
+    background-color: #ffc600;
 }
 
 #footer {
@@ -73,4 +73,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+
+.applyNowBtn {
+    text-align: center;
+    margin-top: 20%;    
 }

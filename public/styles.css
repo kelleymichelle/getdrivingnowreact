@@ -1,5 +1,6 @@
 body {
-    background-image: url('./images/GetDrivingNow8.jpg');
+    /* background-image: url('./images/GetDrivingNow8.jpg'); */
+    background-image: url('./images/GetDrivingNowBackground.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -153,7 +153,7 @@ class GDNNavbar extends React.Component {
                                 handleLogin={this.handleLogin} 
                                 loggedInStatus={this.state.isLoggedIn}/>)}
                             />
-                        <Route path="/form1" component={Form1} />
+                        <Route exact path="/form1" component={Form1} />
                         <Route path="/form2" component={Form2}/>
                         <Route path="/form3" component={Form3} />
                         <Route path="/form4" component={Form4} />
