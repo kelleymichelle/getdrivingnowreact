@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container';
+import axios from 'axios'
 
 class Form4 extends React.Component {
 
@@ -15,7 +16,8 @@ class Form4 extends React.Component {
         job_duration_years: "",
         job_duration_months: "",
         monthly_income: "",
-        redirect: null
+        redirect: null,
+        userId: this.props.location.state.currentUser.id
     }
 
     handleChange = (event) => {      

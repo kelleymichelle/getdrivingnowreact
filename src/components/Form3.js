@@ -15,7 +15,8 @@ class Form3 extends React.Component {
         ssn: "",
         bankruptcy: "",
         redirect: null,
-        userId: this.props.location.state.currentUser.id
+        userId: this.props.location.state.currentUser.id,
+        currentUser: null
     }
 
     handleChange = (event) => {      
@@ -50,7 +51,10 @@ class Form3 extends React.Component {
     render() {
         if(this.state.redirect) {
             return <Redirect to={{
-                pathname: this.state.redirect,                
+                pathname: this.state.redirect,
+                state: {
+                    currentUser: this.state.currentUser
+                }               
             }}/>
         }
         return (

@@ -19,7 +19,8 @@ class Form2 extends React.Component {
         address_duration_years: "",
         address_duration_months: "",
         redirect: null,
-        userId: this.props.location.state.currentUser.id
+        userId: this.props.location.state.currentUser.id,
+        currentUser: null
     }
 
     handleChange = (event) => {      
