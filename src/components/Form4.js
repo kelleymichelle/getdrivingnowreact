@@ -17,7 +17,9 @@ class Form4 extends React.Component {
         job_duration_months: "",
         monthly_income: "",
         redirect: null,
-        userId: this.props.location.state.currentUser.id
+        userId: this.props.location.state.currentUser.id,
+        currentUser: null,
+        form_completion: true
     }
 
     handleChange = (event) => {      
