@@ -1,11 +1,15 @@
 import React from 'react'
+import AdminLogin from './AdminLogin'
 
 export default class AdminPanel extends React.Component {
   
+  handleLogin = creds => {
+    
+  }
 
   render() {
     return (
-      <h1>Admin Panel</h1>
+      <AdminLogin/>
     )
   }
 }
