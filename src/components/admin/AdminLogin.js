@@ -19,6 +19,7 @@ export default class AdminLogin extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
+    this.props.handleLogin(this.state)
   }
 
   render() {

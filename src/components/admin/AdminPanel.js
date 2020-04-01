@@ -3,13 +3,13 @@ import AdminLogin from './AdminLogin'
 
 export default class AdminPanel extends React.Component {
   
-  handleLogin = creds => {
-    
+  handleLogin = data => {
+    console.log(data)
   }
 
   render() {
     return (
-      <AdminLogin/>
+      <AdminLogin handleLogin={this.handleLogin}/>
     )
   }
 }
