@@ -19,6 +19,7 @@ import AboutUs from '../components/AboutUs';
 import FinancingFAQ from '../components/FinancingFAQ';
 import axios from 'axios'
 import brand from '../assets/Getdrivingnowcombrand.png'
+import AdminPanel from '../components/admin/AdminPanel'
 
 class GDNNavbar extends React.Component {
     constructor(props) {
@@ -165,6 +166,8 @@ class GDNNavbar extends React.Component {
                         <Route path="/congratulations" component={Congratulations} />
                         <Route path="/aboutUs" component={AboutUs} />
                         <Route path="/financingFAQ" component={FinancingFAQ} />
+
+                        <Route exact path="/admin-codebangers-admin" component={AdminPanel} />
                         <div style={{height: "50px"}}></div>
                     <Footer />
                 </Container>
