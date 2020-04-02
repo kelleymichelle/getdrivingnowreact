@@ -38,7 +38,8 @@ export default class AdminPanel extends React.Component {
   render() {
     
     return (
-      this.state.isAdmin ? <AdminDashboard/> : <AdminLogin handleLogin={this.handleLogin}/>
+      <AdminDashboard/>
+      // this.state.isAdmin ? <AdminDashboard/> : <AdminLogin handleLogin={this.handleLogin}/>
     )
     
   }
