@@ -4,7 +4,9 @@ import axios from 'axios'
 
 export default class AdminPanel extends React.Component {
   state = {
-    loggedIn: false
+    loggedIn: false,
+    isAdmin: false,
+    redirect: null
   }
   
   handleLogin = data => {
@@ -16,7 +18,20 @@ export default class AdminPanel extends React.Component {
     }
 
     axios.post('http://localhost:3001/admin_login', { user }, {withCredentials: true})
-    .then(response => console.log(response))
+    .then(response => {
+      if (response.data.isAdmin === true) {
+        console.log(response.data)
+        this.setState({
+          loggedIn: true,
+          isAdmin: true
+        })
+      } else {
+        this.setState({
+          redirect: '/',
+          errors: "Sorry! Admins only!"
+        })
+      }
+    })
   }
 
   render() {
