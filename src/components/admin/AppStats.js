@@ -4,7 +4,10 @@ export default class AppStats extends React.Component {
   render() {
     return (
       <div>
-        <h1>App Stats</h1>
+        <h4>App Stats</h4>
+        <div>
+          Applications to Date: {this.props.count}
+        </div>
       </div>
     )
   } 
