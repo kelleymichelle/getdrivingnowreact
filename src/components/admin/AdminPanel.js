@@ -1,6 +1,7 @@
 import React from 'react'
 import AdminLogin from './AdminLogin'
 import axios from 'axios'
+import AdminDashboard from './AdminDashboard'
 
 export default class AdminPanel extends React.Component {
   state = {
@@ -37,7 +38,7 @@ export default class AdminPanel extends React.Component {
   render() {
     
     return (
-        <AdminLogin handleLogin={this.handleLogin}/>
+      this.state.isAdmin ? <AdminDashboard/> : <AdminLogin handleLogin={this.handleLogin}/>
     )
     
   }
